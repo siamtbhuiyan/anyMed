@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Custom Classes */
+.primary-color {
+  @apply bg-[#139c95];
+}
+
+.background-color {
+  @apply bg-[#eff6f6];
+}
