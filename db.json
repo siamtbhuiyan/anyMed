@@ -1,0 +1,469 @@
+{   
+    "data": [
+        {
+            "pharmacies": 
+            [
+                {
+                    "name": "Lazz Pharma",
+                    "id": 1,
+                    "location": "Uttara",
+                    "rating": 5,
+                    "image": "public/images/banner1.jpg"
+                },
+                {
+                    "name": "Tamanna Pharmacy",
+                    "id": 2,
+                    "location": "Uttara",
+                    "rating": 5,
+                    "image": "public/images/banner1.jpg"
+                },
+                {
+                    "name": "Islamia Pharmacy",
+                    "id": 3,
+                    "location": "Bashundhara R/A",
+                    "rating": 4,
+                    "image": "public/images/banner1.jpg"
+                },
+                {
+                    "name": "Life Care Pharmacy",
+                    "id": 4,
+                    "location": "Bashundhara",
+                    "rating": 4,
+                    "image": "public/images/banner2.jpg"
+                },
+                {
+                    "name":"Shahin Pharmacy",
+                    "id": 5,
+                    "location": "Mirpur-12",
+                    "rating": 3,
+                    "image": "public/images/banner2.jpg"
+                },
+                {
+                    "name": "Pharmacy 24/7",
+                    "id": 6,
+                    "location": "Jamuna Future Park, Bashundhara",
+                    "rating": 4,
+                    "image": "public/images/banner2.jpg"
+                },
+                {
+                    "name": "An Pharmacy",
+                    "id": 7,
+                    "location": "Mirpur-14",
+                    "rating": 5,
+                    "image": "public/images/banner3.jpg"
+                },
+                {
+                    "name": "Hossain Pharmacy",
+                    "id": 8,
+                    "location": "Bashundhara RA",
+                    "rating": 4,
+                    "image": "public/images/banner3.jpg"
+                },
+        
+                {
+                    "name": "Wellbeing Pharmacy",
+                    "id": 9,
+                    "location": "Gulshan-1",
+                    "rating": 4 ,
+                    "image": "public/images/banner3.jpg" 
+                },
+                {
+                    "name": "Taj Pharma",
+                    "id": 10,
+                    "location": "Bashundhara",
+                    "rating": 4,
+                    "image": "public/images/banner4.jpg" 
+                },
+                {
+                    "name":"NEW BANANI PHARMACY ",
+                    "id":11,
+                    "location": "Banani",
+                    "rating": 5,
+                    "image": "public/images/banner4.jpg" 
+                },
+                {
+                    "name":"TAQWA PHARMACY ",
+                    "id":12 ,
+                    "location": "Banani",
+                    "rating": 4,
+                    "image": "public/images/banner4.jpg" 
+                },
+                {
+                    "name":"Labaid Pharmacy ",
+                    "id":13 ,
+                    "location": "Mirpur",
+                    "rating": 5,
+                    "image": "public/images/banner5.jpg" 
+                },
+                {
+                    "name": "Ibn Sina Pharmacy",
+                    "id":14 ,
+                    "location": "Badda",
+                    "rating": 5,
+                    "image": "public/images/banner5.jpg" 
+                },
+                {
+                    "name":"Plus Pharmacy",
+                    "id":15 ,
+                    "location": "Gulshan-2",
+                    "rating":4,
+                    "image": "public/images/banner5.jpg" 
+                }
+            ],
+            "medicine": 
+            [
+                {
+                    "name": "Napa",
+                    "id": 1,
+                    "type": "Tablet",
+                    "manufacturer": "Beximco Pharmaceuticals Ltd.",
+                    "dosage": "500mg",
+                    "group": "Paracetamol",
+                    "price": 12,
+                    "quantity": "10 Tablets",
+                    "image": "/public/images/napa500.jpg"
+                },
+                {
+                    "name": "Ace",
+                    "id": 2,
+                    "type": "Tablet",
+                    "manufacturer": "Square Pharmaceuticals Ltd.",
+                    "dosage": "500mg",
+                    "group": "Paracetamol",
+                    "price": 12,
+                    "quantity": "10 Tablets",
+                    "image": "/public/images/ace500.jpg"
+                },
+                {
+                    "name": "Ace",
+                    "id": 3,
+                    "type": "Syrup",
+                    "manufacturer": "Square Pharmaceuticals Ltd",
+                    "dosage": "60ml",
+                    "group": "Paracetamol",
+                    "Price": 35,
+                    "quantity": "1",
+                    "image": "/public/images/acesyrup.jpg"
+                },
+                {
+                    "name": "Cef-3",
+                    "id": 4,
+                    "type": "Capsule",
+                    "manufacturer": "Square Pharmaceuticals Ltd",
+                    "dosage": "200mg",
+                    "group": "Cefixime",
+                    "price": 35,
+                    "quantity": "1",
+                    "image": "/public/images/Cef-3_200mg.jpg"
+                },
+                {
+                    "name": "Tegretol CR",
+                    "id":5 ,
+                    "type": "Capsule",
+                    "manufacturer": "Novartis (Bangladesh) Ltd",
+                    "dosage": "200mg",
+                    "group": "Carbamazepine",
+                    "price": 95,
+                    "quantity": "10",
+                    "image": "/public/images/tegretolcr200.jpg"
+                },
+                {
+                    "name": "Rosu",
+                    "id":6 ,
+                    "type": "Tablet",
+                    "manufacturer": "Popular Pharmaceutical Ltd",
+                    "dosage": "5mg",
+                    "group": "Rosuvastatin",
+                    "price": 100,
+                    "quantity": "10",
+                    "image": "/public/images/rosu5.jpg"
+        
+                },
+                {
+                    "name": "Rosu",
+                    "id":7 ,
+                    "type": " Tablet ",
+                    "manufacturer": "Popular Pharmaceutical Ltd",
+                    "dosage": "10mg",
+                    "group":"Rosuvastatin",
+                    "price": 200,
+                    "quantity": "10",
+                    "image": "/public/images/rosu10.jpg"
+        
+                },
+                {
+                    "name": "Encorate Chrono",
+                    "id":8,
+                    "type": "Tablet",
+                    "manufacturer": "Sun Pharmaceutical (Bangladesh) Ltd.",
+                    "dosage": "300mg",
+                    "group": "Sodium Valproate (valproic acid).",
+                    "price": 80,
+                    "quantity": "10",
+                    "image": "/public/images/encoratechrono300mg.jpg"
+        
+                },
+                {
+                    "name": "Encorate Chrono",
+                    "id": 9,
+                    "type": "Tablet",
+                    "manufacturer": "Sun Pharmaceutical (Bangladesh) Ltd.",
+                    "dosage": "500mg",
+                    "group": "Sodium Valproate ",
+                    "price":600,
+                    "quantity": "50",
+                    "image": "/public/images/encoratechrono500mg.jpg"
+        
+                },
+                {
+                    "name": "Emistat",
+                    "id":10,
+                    "type": "Tablet",
+                    "manufacturer": "Healthcare Pharmaceutical Ltd",
+                    "dosage": "8mg",
+                    "group": "Onadansetron",
+                    "price":110,
+                    "quantity": "10",
+                    "image": "/public/images/emistat8.png"
+        
+                },
+                {
+                    "name": "Emistat",
+                    "id":11 ,
+                    "type": "Tablet",
+                    "manufacturer": "Healthcare Pharmaceutical Ltd",
+                    "dosage": "4mg",
+                    "group": "Onadansetron",
+                    "price":60,
+                    "quantity": "10",
+                    "image": "/public/images/emistat4mg.jpg"
+        
+                },
+                {
+                    "name": "Emistat",
+                    "id":12,
+                    "type": "Syrup",
+                    "manufacturer": "Healthcare Pharmaceutical Ltd",
+                    "dosage": "50ml",
+                    "group": "Onadansetron",
+                    "price":50,
+                    "quantity": "1",
+                    "image": "/public/images/emistatsyrup50ml.png"
+                },
+                {
+                    "name": "Encorate Chrono",
+                    "id":13 ,
+                    "type": "Tablet",
+                    "manufacturer": "Sun Pharmaceutical (Bangladesh) Ltd",
+                    "dosage": "200mg",
+                    "group": "Sodium Valproate",
+                    "price":225,
+                    "quantity": "50",
+                    "image": "/public/images/encoratechrono200mg.jpg"
+                },
+                {
+                    "name": "Viodin",
+                    "id":14 ,
+                    "type": "Ointment",
+                    "manufacturer": "Square Pharmaceutical Ltd ",
+                    "dosage": "25gm",
+                    "group": "Povidone Iodine",
+                    "price": 50,
+                    "quantity": "1",
+                    "image": "/public/images/viodinointment.jpg"
+                },
+                {
+                    "name": "Indever",
+                    "id":15 ,
+                    "type": "Tablet",
+                    "manufacturer": "ACI Limited",
+                    "dosage": "40mg",
+                    "group": "Propranolol Hydrochloride",
+                    "price":14,
+                    "quantity": "10",
+                    "image": "/public/images/indever40.jpg"
+        
+                },
+                {
+                    "name": "Indever",
+                    "id":16 ,
+                    "type": "Tablet",
+                    "manufacturer": "ACI Limited",
+                    "dosage": "10mg",
+                    "group": "Propranolol Hydrochloride",
+                    "price": 50,
+                    "quantity": "100",
+                    "image": "/public/images/indever10.jpg"
+        
+                },
+                {
+                    "name": "Reelife",
+                    "id":17 ,
+                    "type": "Tablet",
+                    "manufacturer": "Eskayef Pharmaceutical Ltd",
+                    "dosage": "12.5mg + 5mg",
+                    "group": "Chlordiazepoxide & Amitriptyline",
+                    "price":448,
+                    "quantity": "56",
+                    "image": "/public/images/reelife.png"
+        
+                },
+                {
+                    "name": "Omidon",
+                    "id":18 ,
+                    "type": "Tablet",
+                    "manufacturer": "Incepta Pharmaceutical Ltd",
+                    "dosage": "10mg",
+                    "group": "Domperidone",
+                    "price":30,
+                    "quantity": "10",
+                    "image": "/public/images/omidon10mg.png"
+        
+                },
+                {
+                    "name": "Pantonix",
+                    "id":19 ,
+                    "type": "Tablet",
+                    "manufacturer": "Incepta Pharmaceutical Ltd",
+                    "dosage": "20mg",
+                    "group": "Pantoprazole",
+                    "price":98,
+                    "quantity": "14",
+                    "image": "/public/images/pantonix20mg.jpg"
+        
+                },
+                {
+                    "name": "Pantonix",
+                    "id":20 ,
+                    "type": "Tablet",
+                    "manufacturer": "Incepta Pharmaceutical Ltd",
+                    "dosage": "40mg",
+                    "group": "Pantoprazole",
+                    "price":140,
+                    "quantity": "14",
+                    "image": "/public/images/pantonix40mg.jpg"
+        
+                },
+                {
+                    "name": "Pantonix",
+                    "id":21 ,
+                    "type": "Injection",
+                    "manufacturer": "Incepta Pharmaceutical Ltd",
+                    "dosage": "40mg/vial",
+                    "group": "Pantoprazole Sodium Sesquihydrate",
+                    "price":100,
+                    "quantity": "10",
+                    "image": "/public/images/pantonix40 mg-vial.jpg"
+        
+                },
+                {
+                    "name": "Sergel",
+                    "id":22 ,
+                    "type": "Capsule",
+                    "manufacturer": "Healthcare Pharmaceutical Ltd",
+                    "dosage": "20mg",
+                    "group": "Esomeprazole",
+                    "price":70,
+                    "quantity": "10",
+                    "image": "/public/images/sergel20.jpg"
+        
+                },
+                {
+                    "name": "Emep",
+                    "id":23 ,
+                    "type": "Capsule",
+                    "manufacturer": "Aristopharma Ltd",
+                    "dosage": "20mg",
+                    "group": "Esomeprazole",
+                    "price":80,
+                    "quantity": "10",
+                    "image": "/public/images/emep20.png"
+        
+                },
+                {
+                    "name": "Esoral MUPS",
+                    "id":24 ,
+                    "type": "Tablet",
+                    "manufacturer": "Eskayef Pharmaceutical Ltd",
+                    "dosage": "20mg",
+                    "group": "Esomeprazole",
+                    "price":100,
+                    "quantity": "10",
+                    "image": "/public/images/esoralmups20.png"
+        
+                },
+                {       
+                    "name": "Esoral",
+                    "id":25 ,
+                    "type": "Capsule",
+                    "manufacturer": "Eskayef Pharmaceutical Ltd",
+                    "dosage": "40mg",
+                    "group": "Esomeprazole",
+                    "price":100,
+                    "quantity": "10",
+                    "image": "/public/images/esoral40.jpg"
+        
+                },
+                {
+                    "name": "Telfin",
+                    "id":26 ,
+                    "type": "Cream",
+                    "manufacturer": "Unimed UniHealth",
+                    "dosage": "30gm",
+                    "group": "Terbinafine Hydrochloride 1%",
+                    "price":180,
+                    "quantity": "1",
+                    "image": "/public/images/telfincream.jpg"
+                },
+                {
+                    "name": "Flagyl",
+                    "id":27 ,
+                    "type": "Tablet",
+                    "manufacturer": "Sanofi Bangladesh Ltd.",
+                    "dosage": "400mg",
+                    "group": "Metronidazole",
+                    "price":15,
+                    "quantity": "10",
+                    "image": "/public/images/flagyl400.jpg"
+        
+                },
+                {
+                    "name": "Ecosprin",
+                    "id":28 ,
+                    "type": "Tablet",
+                    "manufacturer": "Acme Laboratories Ltd.",
+                    "dosage": "75mg",
+                    "group": "Aspirin ",
+                    "price":7,
+                    "quantity": "10",
+                    "image": "/public/images/ecospirin75.jpg"
+        
+                },
+                {
+                    "name": "Osartil",
+                    "id":29 ,
+                    "type": "Tablet",
+                    "manufacturer": "Incepta Pharmaceuticals Ltd.",
+                    "dosage": "50 Plus",
+                    "group": "Losartan potassium & Hydrochlorothiazide",
+                    "price":465,
+                    "quantity": "50",
+                    "image": "/public/images/osartil50plus.jpg"
+        
+                },
+                {
+                    "name": "Duocard",
+                    "id":30 ,
+                    "type": "Tablet",
+                    "manufacturer": "The ACME Laboratories Ltd.",
+                    "dosage": "10mg",
+                    "group": "Cilnidipine",
+                    "price":80,
+                    "quantity": "10",
+                    "image": "/public/images/duocard10.png"
+                }
+            ]
+        }
+    ]
+}
+    
