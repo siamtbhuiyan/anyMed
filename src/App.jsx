@@ -1,7 +1,12 @@
-import Navbar from "./components/Navbar"
 import data from "./data/db.json"
 import { useState, useRef } from "react"
-import PharmacyList from "./components/PharmacyList"
+import HomePage from "./components/HomePage"
+import PharmacyPage from "./components/PharmacyPage"
+
+import {
+  BrowserRouter as Router,
+  Routes, Route, useMatch
+} from 'react-router-dom'
 
 const App = () => {
   const [pharmacies, setPharmacies] = useState(data.pharmacies)
@@ -24,11 +29,12 @@ const App = () => {
   }
   return (
     <div className="container mx-auto">
-      <Navbar searchPharmacies={searchPharmacies} inputRef={inputRef} />
-      <div className="mx-5 my-14">
-        <div className="font-bold text-2xl mb-5">Pharmacies</div>
-        <PharmacyList pharmacies={pharmacies}  />
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} />}/>
+          <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} />}/>
+        </Routes>
+      </Router>
     </div>
   )
 }
