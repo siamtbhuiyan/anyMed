@@ -119,7 +119,7 @@
             "group": "Paracetamol",
             "price": 12,
             "quantity": "10 Tablets",
-            "image": "images/napa500.jpg"
+            "image": "../images/napa500.jpg"
         },
         {
             "name": "Ace",
@@ -130,7 +130,7 @@
             "group": "Paracetamol",
             "price": 12,
             "quantity": "10 Tablets",
-            "image": "images/ace500.jpg"
+            "image": "../images/ace500.jpg"
         },
         {
             "name": "Ace",
@@ -139,9 +139,9 @@
             "manufacturer": "Square Pharmaceuticals Ltd",
             "dosage": "60ml",
             "group": "Paracetamol",
-            "Price": 35,
+            "price": 35,
             "quantity": "1",
-            "image": "images/acesyrup.jpg"
+            "image": "../images/acesyrup.jpg"
         },
         {
             "name": "Cef-3",
@@ -152,7 +152,7 @@
             "group": "Cefixime",
             "price": 35,
             "quantity": "1",
-            "image": "images/Cef-3_200mg.jpg"
+            "image": "../images/Cef-3_200mg.jpg"
         },
         {
             "name": "Tegretol CR",
@@ -163,7 +163,7 @@
             "group": "Carbamazepine",
             "price": 95,
             "quantity": "10",
-            "image": "images/tegretolcr200.jpg"
+            "image": "../images/tegretolcr200.jpg"
         },
         {
             "name": "Rosu",
@@ -174,7 +174,7 @@
             "group": "Rosuvastatin",
             "price": 100,
             "quantity": "10",
-            "image": "images/rosu5.jpg"
+            "image": "../images/rosu5.jpg"
 
         },
         {
@@ -186,7 +186,7 @@
             "group":"Rosuvastatin",
             "price": 200,
             "quantity": "10",
-            "image": "images/rosu10.jpg"
+            "image": "../images/rosu10.jpg"
 
         },
         {
@@ -198,7 +198,7 @@
             "group": "Sodium Valproate (valproic acid).",
             "price": 80,
             "quantity": "10",
-            "image": "images/encoratechrono300mg.jpg"
+            "image": "../images/encoratechrono300mg.jpg"
 
         },
         {
@@ -210,7 +210,7 @@
             "group": "Sodium Valproate ",
             "price":600,
             "quantity": "50",
-            "image": "images/encoratechrono500mg.jpg"
+            "image": "../images/encoratechrono500mg.jpg"
 
         },
         {
@@ -222,7 +222,7 @@
             "group": "Onadansetron",
             "price":110,
             "quantity": "10",
-            "image": "images/emistat8.png"
+            "image": "../images/emistat8.png"
 
         },
         {
@@ -234,7 +234,7 @@
             "group": "Onadansetron",
             "price":60,
             "quantity": "10",
-            "image": "images/emistat4mg.jpg"
+            "image": "../images/emistat4mg.jpg"
 
         },
         {
@@ -246,7 +246,7 @@
             "group": "Onadansetron",
             "price":50,
             "quantity": "1",
-            "image": "images/emistatsyrup50ml.png"
+            "image": "../images/emistatsyrup50ml.png"
         },
         {
             "name": "Encorate Chrono",
@@ -257,7 +257,7 @@
             "group": "Sodium Valproate",
             "price":225,
             "quantity": "50",
-            "image": "images/encoratechrono200mg.jpg"
+            "image": "../images/encoratechrono200mg.jpg"
         },
         {
             "name": "Viodin",
@@ -268,7 +268,7 @@
             "group": "Povidone Iodine",
             "price": 50,
             "quantity": "1",
-            "image": "images/viodinointment.jpg"
+            "image": "../images/viodinointment.jpg"
         },
         {
             "name": "Indever",
@@ -279,7 +279,7 @@
             "group": "Propranolol Hydrochloride",
             "price":14,
             "quantity": "10",
-            "image": "images/indever40.jpg"
+            "image": "../images/indever40.jpg"
 
         },
         {
@@ -291,7 +291,7 @@
             "group": "Propranolol Hydrochloride",
             "price": 50,
             "quantity": "100",
-            "image": "images/indever10.jpg"
+            "image": "../images/indever10.jpg"
 
         },
         {
@@ -303,7 +303,7 @@
             "group": "Chlordiazepoxide & Amitriptyline",
             "price":448,
             "quantity": "56",
-            "image": "images/reelife.png"
+            "image": "../images/reelife.png"
 
         },
         {
@@ -315,7 +315,7 @@
             "group": "Domperidone",
             "price":30,
             "quantity": "10",
-            "image": "images/omidon10mg.png"
+            "image": "../images/omidon10mg.png"
 
         },
         {
@@ -327,7 +327,7 @@
             "group": "Pantoprazole",
             "price":98,
             "quantity": "14",
-            "image": "images/pantonix20mg.jpg"
+            "image": "../images/pantonix20mg.jpg"
 
         },
         {
@@ -339,7 +339,7 @@
             "group": "Pantoprazole",
             "price":140,
             "quantity": "14",
-            "image": "images/pantonix40mg.jpg"
+            "image": "../images/pantonix40mg.jpg"
 
         },
         {
@@ -351,7 +351,7 @@
             "group": "Pantoprazole Sodium Sesquihydrate",
             "price":100,
             "quantity": "10",
-            "image": "images/pantonix40 mg-vial.jpg"
+            "image": "../images/pantonix40 mg-vial.jpg"
 
         },
         {
@@ -363,7 +363,7 @@
             "group": "Esomeprazole",
             "price":70,
             "quantity": "10",
-            "image": "images/sergel20.jpg"
+            "image": "../images/sergel20.jpg"
 
         },
         {
@@ -375,7 +375,7 @@
             "group": "Esomeprazole",
             "price":80,
             "quantity": "10",
-            "image": "images/emep20.png"
+            "image": "../images/emep20.png"
 
         },
         {
@@ -387,7 +387,7 @@
             "group": "Esomeprazole",
             "price":100,
             "quantity": "10",
-            "image": "images/esoralmups20.png"
+            "image": "../images/esoralmups20.png"
 
         },
         {       
@@ -399,7 +399,7 @@
             "group": "Esomeprazole",
             "price":100,
             "quantity": "10",
-            "image": "images/esoral40.jpg"
+            "image": "../images/esoral40.jpg"
 
         },
         {
@@ -411,7 +411,7 @@
             "group": "Terbinafine Hydrochloride 1%",
             "price":180,
             "quantity": "1",
-            "image": "images/telfincream.jpg"
+            "image": "../images/telfincream.jpg"
         },
         {
             "name": "Flagyl",
@@ -422,7 +422,7 @@
             "group": "Metronidazole",
             "price":15,
             "quantity": "10",
-            "image": "images/flagyl400.jpg"
+            "image": "../images/flagyl400.jpg"
 
         },
         {
@@ -434,7 +434,7 @@
             "group": "Aspirin ",
             "price":7,
             "quantity": "10",
-            "image": "images/ecospirin75.jpg"
+            "image": "../images/ecospirin75.jpg"
 
         },
         {
@@ -446,7 +446,7 @@
             "group": "Losartan potassium & Hydrochlorothiazide",
             "price":465,
             "quantity": "50",
-            "image": "images/osartil50plus.jpg"
+            "image": "../images/osartil50plus.jpg"
 
         },
         {
@@ -458,7 +458,7 @@
             "group": "Cilnidipine",
             "price":80,
             "quantity": "10",
-            "image": "images/duocard10.png"
+            "image": "../images/duocard10.png"
         }
     ]
 }

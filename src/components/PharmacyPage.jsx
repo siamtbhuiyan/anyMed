@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import Navbar from "./Navbar"
+import MedicineList from "./MedicineList"
 
 const PharmacyPage = ({ pharmacies, medicine }) => {
     const id = Number(useParams().id)
