@@ -1,8 +1,8 @@
-import { Search, ShoppingCartOutlined } from '@mui/icons-material'
+import { Search, ShoppingCartOutlined, Star } from '@mui/icons-material'
 import stringSimilarity from 'string-similarity'
 
 function useIcon(word) {
-    const icons = {Search, ShoppingCartOutlined}
+    const icons = {Search, ShoppingCartOutlined, Star}
     let available = false;
     Object.keys(icons).map(i => {
         if (i === word) {
