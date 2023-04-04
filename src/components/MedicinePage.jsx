@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom"
 import Navbar from "./Navbar"
 import { useState } from "react"
 
-const MedicinePage = ({ medicine }) => {
+const MedicinePage = ({ medicine, addToCart }) => {
     const id = Number(useParams().id)
     const currentMedicine = medicine.find(m => m.id === id)  
     const [quantity, setQuantity] = useState(0)
@@ -21,7 +21,7 @@ const MedicinePage = ({ medicine }) => {
             <Navbar />
             <div className="flex flex-col md:flex-row md:pt-36">
                 <div className="flex-1 flex md:justify-end">
-                    <div className="w-full md:h-96 mx-5">
+                    <div className="w-full md:w-auto md:h-96 md:mx-0 mx-5">
                         <img className="h-full text-center" src={currentMedicine.image} alt="" />
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const MedicinePage = ({ medicine }) => {
                             <span className="p-3">{`${quantity}`}</span>
                             <button className="p-3 hover:cursor-pointer hover:bg-gray-300" onClick={() => increaseQuantity()}>+</button>
                         </div>
-                        <button className="bg-[#139c95] md:flex-none flex-[7] rounded md:px-6 py-2 text-white mx-3 hover:bg-[#00a59f]">Add To Cart</button>
+                        <button className="bg-[#139c95] md:flex-none flex-[7] rounded md:px-6 py-2 text-white mx-3 hover:bg-[#00a59f] disabled:cursor-not-allowed disabled:hover:bg-[#139c95]" disabled={quantity === 0 ? true : false} onClick={() => addToCart(currentMedicine, quantity)}>Add To Cart</button>
                     </div>
                 </div>
             </div>

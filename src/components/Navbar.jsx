@@ -9,7 +9,9 @@ const Navbar = () => {
             <Link to="/">
                 <div className="font-bold text-2xl">AnyMed</div>
             </Link>
+            <Link to="/cart/checkout">
                 <ShoppingCartOutlinedIcon className="hover:cursor-pointer"/>
+            </Link>
             </div>
         </div>
     )
