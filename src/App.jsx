@@ -2,6 +2,7 @@ import data from "./data/db.json"
 import { useState, useRef } from "react"
 import HomePage from "./components/HomePage"
 import PharmacyPage from "./components/PharmacyPage"
+import MedicinePage from "./components/MedicinePage"
 
 import {
   BrowserRouter as Router,
@@ -41,12 +42,14 @@ const App = () => {
     );
     setMedicine(filteredMedicine)
   }
+
   return (
     <div className="container mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} />}/>
           <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
+          <Route path="/medicine/:id" element={<MedicinePage medicine={medicine}  />}/>
         </Routes>
       </Router>
     </div>

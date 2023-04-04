@@ -140,7 +140,7 @@
             "dosage": "60ml",
             "group": "Paracetamol",
             "price": 35,
-            "quantity": "1",
+            "quantity": "1 Bottle",
             "image": "../images/acesyrup.jpg"
         },
         {
@@ -151,7 +151,7 @@
             "dosage": "200mg",
             "group": "Cefixime",
             "price": 35,
-            "quantity": "1",
+            "quantity": "6",
             "image": "../images/cef-3-200.jpg"
         },
         {
@@ -245,7 +245,7 @@
             "dosage": "50ml",
             "group": "Onadansetron",
             "price":50,
-            "quantity": "1",
+            "quantity": "1 ",
             "image": "../images/emistatsyrup50ml.png"
         },
         {
