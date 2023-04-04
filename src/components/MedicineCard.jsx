@@ -6,7 +6,7 @@ const MedicineCard = ({ medicine }) => {
         </div>
         <div className="text-lg font-semibold mt-4 mb-1">{medicine.name}</div>
         <div className="text-gray-500 text-sm mb-4">
-        {medicine.type}
+        {medicine.type} - {medicine.dosage}
         </div>
         <div className="text-lg font-semibold">Tk. {medicine.price}</div>
     </div>

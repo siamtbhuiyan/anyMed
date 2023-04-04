@@ -152,7 +152,7 @@
             "group": "Cefixime",
             "price": 35,
             "quantity": "1",
-            "image": "../images/Cef-3_200mg.jpg"
+            "image": "../images/cef-3-200.jpg"
         },
         {
             "name": "Tegretol CR",
@@ -222,7 +222,7 @@
             "group": "Onadansetron",
             "price":110,
             "quantity": "10",
-            "image": "../images/emistat8.png"
+            "image": "../images/emistat-8mg.jpg"
 
         },
         {
@@ -303,7 +303,7 @@
             "group": "Chlordiazepoxide & Amitriptyline",
             "price":448,
             "quantity": "56",
-            "image": "../images/reelife.png"
+            "image": "../images/reelife.jpg"
 
         },
         {
@@ -387,7 +387,7 @@
             "group": "Esomeprazole",
             "price":100,
             "quantity": "10",
-            "image": "../images/esoralmups20.png"
+            "image": "../images/esoral-mups.jpg"
 
         },
         {       
