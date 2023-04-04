@@ -1,8 +1,14 @@
-import React from 'react'
-
-const CartList = () => {
+import CartItem from "./CartItem"
+const CartList = ({ cart }) => {
   return (
-    <div>CartList</div>
+    <div className="flex-[1]">
+        {cart.map((c) => {
+            return (
+                <CartItem item={c} key={c.id} />
+            )
+        })
+        }
+    </div>
   )
 }
 

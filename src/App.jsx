@@ -14,6 +14,7 @@ const App = () => {
   const [pharmacies, setPharmacies] = useState(data.pharmacies)
   const [medicine, setMedicine] = useState(data.medicine)
   const [cart, setCart] = useState([])
+  const [notification, setNotification] = useState(false)
 
   const inputRef = useRef(null)
   const medicineRef = useRef(null)
@@ -80,6 +81,14 @@ const App = () => {
     setCart(currentCart)
   }
 
+  const changeNotification = () => {
+    setTimeout(() => {
+      setNotification(true)
+    }, 3000);
+    setNotification(false)
+    console.log(notification)
+  }
+
   return (
     <div className="container mx-auto">
       <Router>
@@ -87,7 +96,7 @@ const App = () => {
           <Route path="/" element={<HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} />}/>
           <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
           <Route path="/medicine/:id" element={<MedicinePage medicine={medicine} addToCart={addToCart} />}/>
-          <Route path="/cart/checkout" element={<CheckoutPage />} />
+          <Route path="/cart/checkout" element={<CheckoutPage cart={cart} />} />
         </Routes>
       </Router>
     </div>

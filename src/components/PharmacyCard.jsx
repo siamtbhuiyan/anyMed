@@ -7,7 +7,7 @@ const PharmacyCard = ({ pharmacy }) => {
         <Link to={`/pharmacies/${pharmacy.id}`}>
             <div>
                 <div className="h-56 xs:h-64 sm:h-96 md:h-72">
-                    <img src={pharmacy.image} alt="" class="h-full w-full rounded-3xl" />
+                    <img src={pharmacy.image} alt="" className="h-full w-full rounded-3xl" />
                 </div>
                 <div className="mt-4 mb-2 flex justify-between">
                     <div className="inline-block text-gray-500 text-sm pr-1 pt-1">
