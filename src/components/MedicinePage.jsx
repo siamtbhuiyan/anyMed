@@ -7,7 +7,7 @@ const MedicinePage = ({ medicine, addToCart }) => {
     const currentMedicine = medicine.find(m => m.id === id)  
     const [quantity, setQuantity] = useState(0)
     const increaseQuantity = () => {
-        if (quantity <= 14) {
+        if (quantity < currentMedicine.quantity) {
             setQuantity(quantity + 1)
         } 
     }
@@ -22,7 +22,7 @@ const MedicinePage = ({ medicine, addToCart }) => {
             <div className="flex flex-col md:flex-row md:pt-36">
                 <div className="flex-1 flex md:justify-end">
                     <div className="w-full md:w-auto md:h-96 md:mx-0 mx-5">
-                        <img className="h-full text-center" src={currentMedicine.image} alt="" />
+                        <img className="h-full text-center" src={`http://127.0.0.1:8000/storage/images/medicines/${currentMedicine.image}`} alt="" />
                     </div>
                 </div>
                 <div className="flex-1 px-5 md:pl-10 md:py-0 py-12">
@@ -36,6 +36,10 @@ const MedicinePage = ({ medicine, addToCart }) => {
                     <div className="pb-6">
                         <div className="text-gray-500 text-sm">Manufacturer</div>
                         <div>{currentMedicine.manufacturer}</div>
+                    </div>
+                    <div className="pb-6">
+                        <div className="text-gray-500 text-sm">In Stock</div>
+                        <div>{currentMedicine.quantity}</div>
                     </div>
                     <div className="flex">
                         <div className="bg-gray-200 md:flex-none flex-[3] rounded flex justify-between items-center text-lg">

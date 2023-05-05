@@ -1,5 +1,5 @@
-import data from "./data/db.json"
-import { useState, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
+import pharmacyService from "./services/pharmacy"
 import HomePage from "./components/HomePage"
 import PharmacyPage from "./components/PharmacyPage"
 import MedicinePage from "./components/MedicinePage"
@@ -7,20 +7,44 @@ import CheckoutPage from "./components/CheckoutPage"
 
 import {
   BrowserRouter as Router,
-  Routes, Route, useMatch
+  Routes, Route
 } from 'react-router-dom'
+import medicineService from "./services/medicine"
 
 const App = () => {
-  const [pharmacies, setPharmacies] = useState(data.pharmacies)
-  const [medicine, setMedicine] = useState(data.medicine)
+  const [allPharmacies, setAllPharmacies] = useState([])
+  const [allMedicine, setAllMedicine] = useState([])
+  const [pharmacies, setPharmacies] = useState([])
+  const [medicine, setMedicine] = useState([])
   const [cart, setCart] = useState([])
-  const [notification, setNotification] = useState(false)
 
   const inputRef = useRef(null)
   const medicineRef = useRef(null)
 
+
+  const getPharmacies = async () => {
+    await pharmacyService.getPharmacies().then(pharmacies =>
+      setPharmacies(pharmacies)
+    )
+    setAllPharmacies(pharmacies);
+  }
+
+  const getMedicines = async () => {
+    await medicineService.getMedicines().then(medicines => 
+      setMedicine(medicines)  
+    )
+    setAllMedicine(medicine);
+  }
+
+  useEffect(() => {
+    getPharmacies()
+    getMedicines()
+  }, [])
+
+  console.log("1ST", pharmacies)
+
   const searchPharmacies = async (searchField) => {
-    const filteredPharmacies = data.pharmacies.filter(
+    const filteredPharmacies = allPharmacies.filter(
       p => {
         return (
           p
@@ -31,9 +55,10 @@ const App = () => {
       }
     );
     setPharmacies(filteredPharmacies)
+    console.log("2ND", pharmacies)
   }
   const searchMedicine = async (searchField) => {
-    const filteredMedicine = data.medicine.filter(
+    const filteredMedicine = allMedicine.filter(
       m => {
         return (
           m
@@ -57,7 +82,6 @@ const App = () => {
           newItem = false
         }
       })
-      console.log(newItem)
       if (newItem === true) {
         currentItem = {
           id: medicine.id,
@@ -81,13 +105,7 @@ const App = () => {
     setCart(currentCart)
   }
 
-  const changeNotification = () => {
-    setTimeout(() => {
-      setNotification(true)
-    }, 3000);
-    setNotification(false)
-    console.log(notification)
-  }
+  console.log("LAST", pharmacies)
 
   return (
     <div className="container mx-auto">
