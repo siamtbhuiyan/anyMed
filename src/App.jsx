@@ -9,7 +9,7 @@ import Register from "./components/Register"
 
 import {
   BrowserRouter as Router,
-  Routes, Route
+  Routes, Route, useNavigate
 } from 'react-router-dom'
 import medicineService from "./services/medicine"
 import authService from "./services/auth"
@@ -29,6 +29,7 @@ const App = () => {
   const emailRef = useRef(null)
   const passwordRef = useRef(null)
   const passwordConfirmRef = useRef(null)
+  const navigate = useNavigate()
 
 
   const getPharmacies = async () => {
@@ -121,11 +122,11 @@ const App = () => {
     await authService.register(name, email, password, confirmation).then(response =>
       setUser(response)
     )
+    navigate('/')
   }
 
   return (
     <div className="container mx-auto">
-      <Router>
         <Routes>
           <Route path="/" element={user ? <HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} /> : <Login emailRef={emailRef} passwordRef={passwordRef} login={login} />}/>
           <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
@@ -133,7 +134,6 @@ const App = () => {
           <Route path="/cart/checkout" element={<CheckoutPage cart={cart} />} />
           <Route path="/register" element={<Register nameRef={nameRef} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} register={register}/>} />
         </Routes>
-      </Router>
     </div>
   )
 }

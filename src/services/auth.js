@@ -8,13 +8,18 @@ const config = {
     }
 }
 
-
 const login = async (email, password) => {
     const data = {email, password}
     const response = await axios.post(`${baseUrl}/login`, data, config)
     return response.data
 }
 
-const authService = { login }
+const register = async (name, email, password, password_confirmation) => {
+    const data = {name, email, password, password_confirmation}
+    const response = await axios.post(`${baseUrl}/register`, data, config)
+    return response.data
+}
+
+const authService = { login, register }
 
 export default authService
