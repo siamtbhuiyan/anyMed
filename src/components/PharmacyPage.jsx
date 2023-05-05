@@ -3,13 +3,13 @@ import Navbar from "./Navbar"
 import MedicineList from "./MedicineList"
 import SearchBar from "./SearchBar"
 
-const PharmacyPage = ({ pharmacies, medicine, searchMedicine, medicineRef }) => {
+const PharmacyPage = ({ logout, pharmacies, medicine, searchMedicine, medicineRef }) => {
     const id = Number(useParams().id)
     const pharmacy = pharmacies.find(pharmacy => pharmacy.id === id)
     const currentMedicine = medicine.filter(m => m.pharmacy === pharmacy.name)
     return (
         <div>
-            <Navbar />
+            <Navbar logout={logout} />
             <SearchBar name="Medicine" searchMedicine={searchMedicine} medicineRef={medicineRef} />
             <div className="mx-5 my-14">
                 <div className="font-bold text-2xl mb-5">Welcome to {pharmacy.name}!</div>

@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom"
 import Navbar from "./Navbar"
 import { useState } from "react"
 
-const MedicinePage = ({ medicine, addToCart }) => {
+const MedicinePage = ({ logout, medicine, addToCart }) => {
     const id = Number(useParams().id)
     const currentMedicine = medicine.find(m => m.id === id)  
     const [quantity, setQuantity] = useState(0)
@@ -18,7 +18,7 @@ const MedicinePage = ({ medicine, addToCart }) => {
     }
     return (
         <div>
-            <Navbar />
+            <Navbar logout={logout} />
             <div className="flex flex-col md:flex-row md:pt-36">
                 <div className="flex-1 flex md:justify-end">
                     <div className="w-full md:w-auto md:h-96 md:mx-0 mx-5">

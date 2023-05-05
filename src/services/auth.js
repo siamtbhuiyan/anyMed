@@ -20,6 +20,22 @@ const register = async (name, email, password, password_confirmation) => {
     return response.data
 }
 
-const authService = { login, register }
+const logout = async (user) => {
+    const data = {}
+    const config2 =  {
+        headers: { 
+            'Authorization': `Bearer ${user.token}`,
+            'Accept': 'application/json',
+            'Content-Type' : 'application/json'
+        }
+    };
+
+    console.log(config2)
+
+    const response = await axios.post(`${baseUrl}/logout`, data, config2);
+    return response;
+}
+
+const authService = { login, register, logout }
 
 export default authService

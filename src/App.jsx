@@ -125,12 +125,21 @@ const App = () => {
     navigate('/')
   }
 
+  const logout = async () => {
+    await authService.logout(user).then(response => 
+      console.log(response)
+    )
+    setUser(null)
+    console.log(user)
+    navigate("/")
+  }
+
   return (
     <div className="container mx-auto">
         <Routes>
-          <Route path="/" element={user ? <HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} /> : <Login emailRef={emailRef} passwordRef={passwordRef} login={login} />}/>
-          <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
-          <Route path="/medicine/:id" element={<MedicinePage medicine={medicine} addToCart={addToCart} />}/>
+          <Route path="/" element={user ? <HomePage logout={logout} pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} /> : <Login emailRef={emailRef} passwordRef={passwordRef} login={login} />}/>
+          <Route path="/pharmacies/:id" element={<PharmacyPage logout={logout} pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
+          <Route path="/medicine/:id" element={<MedicinePage logout={logout} medicine={medicine} addToCart={addToCart} />}/>
           <Route path="/cart/checkout" element={<CheckoutPage cart={cart} />} />
           <Route path="/register" element={<Register nameRef={nameRef} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} register={register}/>} />
         </Routes>
