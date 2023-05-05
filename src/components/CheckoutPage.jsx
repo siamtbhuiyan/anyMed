@@ -1,14 +1,13 @@
 import CartList from "./CartList"
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const CheckoutPage = ({ cart }) => {
-    console.log(cart)
+const CheckoutPage = ({ cart, emptyCart }) => {
     const subtotalArray = cart.map(c => c.quantity*c.price)
     const subtotal = subtotalArray.reduce((partialSum, a) => partialSum + a, 0);
     const navigate = useNavigate();
     const refreshPage = () => {
         navigate("/");
-        window.location.reload(true)
+        emptyCart();
     }
     if (cart.length !== 0) {
         return (

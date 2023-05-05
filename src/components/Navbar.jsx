@@ -12,10 +12,10 @@ const Navbar = ({ logout }) => {
             </Link>
             <div>
                 <Link to="/cart/checkout">
-                    <ShoppingCartOutlinedIcon className="hover:cursor-pointer mx-1"/>
+                    <ShoppingCartOutlinedIcon className="hover:cursor-pointer mx-2"/>
                 </Link>
                <button onClick={() => logout()}>
-                    <LogoutIcon className="hover:cursor-pointer mx-1" />
+                    <LogoutIcon className="hover:cursor-pointer mx-2" />
                </button>
             </div>
             

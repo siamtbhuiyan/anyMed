@@ -33,17 +33,19 @@ const App = () => {
 
 
   const getPharmacies = async () => {
-    await pharmacyService.getPharmacies().then(pharmacies =>
+    await pharmacyService.getPharmacies().then(pharmacies => {
       setPharmacies(pharmacies)
+      setAllPharmacies(pharmacies);
+      }
     )
-    setAllPharmacies(pharmacies);
   }
 
   const getMedicines = async () => {
-    await medicineService.getMedicines().then(medicines => 
-      setMedicine(medicines)  
+    await medicineService.getMedicines().then(medicines => {
+      setMedicine(medicines) 
+      setAllMedicine(medicines);
+      }
     )
-    setAllMedicine(medicine);
   }
 
   useEffect(() => {
@@ -75,7 +77,9 @@ const App = () => {
         );
       }
     );
+    
     setMedicine(filteredMedicine)
+    console.log(medicine)
   }
 
   const addToCart = (medicine, q) => {
@@ -134,13 +138,17 @@ const App = () => {
     navigate("/")
   }
 
+  const emptyCart = async () => {
+    setCart([])
+  }
+
   return (
     <div className="container mx-auto">
         <Routes>
           <Route path="/" element={user ? <HomePage logout={logout} pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} /> : <Login emailRef={emailRef} passwordRef={passwordRef} login={login} />}/>
           <Route path="/pharmacies/:id" element={<PharmacyPage logout={logout} pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
           <Route path="/medicine/:id" element={<MedicinePage logout={logout} medicine={medicine} addToCart={addToCart} />}/>
-          <Route path="/cart/checkout" element={<CheckoutPage cart={cart} />} />
+          <Route path="/cart/checkout" element={<CheckoutPage cart={cart} emptyCart={emptyCart} />} />
           <Route path="/register" element={<Register nameRef={nameRef} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} register={register}/>} />
         </Routes>
     </div>
