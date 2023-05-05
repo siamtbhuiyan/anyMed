@@ -4,12 +4,15 @@ import HomePage from "./components/HomePage"
 import PharmacyPage from "./components/PharmacyPage"
 import MedicinePage from "./components/MedicinePage"
 import CheckoutPage from "./components/CheckoutPage"
+import Login from "./components/Login"
+import Register from "./components/Register"
 
 import {
   BrowserRouter as Router,
   Routes, Route
 } from 'react-router-dom'
 import medicineService from "./services/medicine"
+import authService from "./services/auth"
 
 const App = () => {
   const [allPharmacies, setAllPharmacies] = useState([])
@@ -17,9 +20,15 @@ const App = () => {
   const [pharmacies, setPharmacies] = useState([])
   const [medicine, setMedicine] = useState([])
   const [cart, setCart] = useState([])
+  const [user, setUser] = useState(null)
 
   const inputRef = useRef(null)
   const medicineRef = useRef(null)
+  
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
+  const passwordConfirmRef = useRef(null)
 
 
   const getPharmacies = async () => {
@@ -41,8 +50,6 @@ const App = () => {
     getMedicines()
   }, [])
 
-  console.log("1ST", pharmacies)
-
   const searchPharmacies = async (searchField) => {
     const filteredPharmacies = allPharmacies.filter(
       p => {
@@ -55,7 +62,6 @@ const App = () => {
       }
     );
     setPharmacies(filteredPharmacies)
-    console.log("2ND", pharmacies)
   }
   const searchMedicine = async (searchField) => {
     const filteredMedicine = allMedicine.filter(
@@ -105,16 +111,27 @@ const App = () => {
     setCart(currentCart)
   }
 
-  console.log("LAST", pharmacies)
+  const login = async (email, password) => {
+    await authService.login(email, password).then(response =>
+      setUser(response)
+    )
+  }
+
+  const register = async (name, email, password, confirmation) => {
+    await authService.register(name, email, password, confirmation).then(response =>
+      setUser(response)
+    )
+  }
 
   return (
     <div className="container mx-auto">
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} />}/>
+          <Route path="/" element={user ? <HomePage pharmacies={pharmacies} searchPharmacies={searchPharmacies} inputRef={inputRef} /> : <Login emailRef={emailRef} passwordRef={passwordRef} login={login} />}/>
           <Route path="/pharmacies/:id" element={<PharmacyPage pharmacies={pharmacies} medicine={medicine} searchMedicine={searchMedicine} medicineRef={medicineRef} />}/>
           <Route path="/medicine/:id" element={<MedicinePage medicine={medicine} addToCart={addToCart} />}/>
           <Route path="/cart/checkout" element={<CheckoutPage cart={cart} />} />
+          <Route path="/register" element={<Register nameRef={nameRef} emailRef={emailRef} passwordRef={passwordRef} passwordConfirmRef={passwordConfirmRef} register={register}/>} />
         </Routes>
       </Router>
     </div>
